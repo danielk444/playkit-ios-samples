@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // V2
-//        GoogleCastManager.sharedInstance.setup(applicationId: "61EB4CBF")
+        GoogleCastManager.sharedInstance.setup(applicationId: "61EB4CBF")
         
         // V3
-        GoogleCastManager.sharedInstance.setup(applicationId: "B202D11C")
+//        GoogleCastManager.sharedInstance.setup(applicationId: "B202D11C")
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
