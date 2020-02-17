@@ -61,8 +61,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         playerContainer.sendSubviewToBack(self.player.view!)
        
         // Uncomment the type of media needed
-//        let mediaEntry = getMediaWithInternalSubtitles()
-        let mediaEntry = getMediaWithExternalSubtitles()
+        let mediaEntry = getMediaWithInternalSubtitles()
+//        let mediaEntry = getMediaWithExternalSubtitles()
 //        let mediaEntry = getDRMMediaWithExternalSubtitles()
         
         // Create media config
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         // Set if we want the player to auto select the subtitles.
         player.settings.trackSelection.textSelectionMode = .auto
-        player.settings.trackSelection.textSelectionLanguage = "en"
+//        player.settings.trackSelection.textSelectionLanguage = "en"
         
         // Prepare the player
         player.prepare(mediaConfig)
@@ -90,10 +90,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func getMediaWithInternalSubtitles() -> PKMediaEntry {
-        let contentURL = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
+        let contentURL = "https://cdnapisec.kaltura.com/p/2488041/sp/248804100/playManifest/entryId/1_2si8665o/protocol/https/format/applehttp/flavorIds/1_hd5qxrt5,1_8w6x9a5g,1_idcwcj8d,1_iz6quxqm,1_5bopbxf1,1_m2ax0yub/ks/djJ8MjQ4ODA0MXyHwKM4USj6a25MCCy5Elv8cDcGDU5U01Moc8SBTHqX_RP_tzpOwJMAQqAzzVWvewqk8CUDsD3licHGT6KkxFgfRVD0lRrEm5YVk61FgxzYnn1tkHpU0tFDm63sxV0kIBdXmXRFKQVzl-QugaZDItToV2uCf41IGnvcSz7-nVIGrazPTKqGEmfPwX1BN5Riibjw91tHQJ_Bhz59dPqYJcD6/a.m3u8"
         
         // Create media source and initialize a media entry with that source
-        let entryId = "bipbop_16x9"
+        let entryId = "1_2si8665o"
         let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
         
         // Setup media entry
